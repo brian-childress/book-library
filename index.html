@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Library</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
+        <script src="_/js/jquery.js"></script>
+        <script src="_/js/jquery.mobile.js"></script>
+        <script src="_/js/usergrid.min.js"></script>
+        <script src="_/js/app.js"></script>
+    </head>
+    <body>
+        <div data-role="page" data-theme="c" id="page-messages-list">
+          <div data-role="header" data-theme="b">
+            <h1>My Books</h1>
+            <a href="#page-new-message" id="btn-compose" data-icon="plus" data-iconpos="right" data-inline="true" data-role="button" data-rel="dialog" data-transition="fade" class="ui-btn-right">Compose</a>
+          </div> <!-- header -->
+          <ul id="messages-list"  data-role="listview" data-inset="true" >
+            <li>No books here!</li>
+          </ul>
+        </div> <!-- page-messages-list -->
+
+        <div data-role="page" data-theme="b" id="page-new-message">
+          <div data-role="header" data-theme="b">
+            <h1>Add a New Book</h1>
+          </div> <!-- header -->
+
+          <div data-role="content">
+            <form>
+              <label for="content">Title</label>
+              <textarea id="content" class="input-xlarge" rows="3" style="margin: 0px; width: 100%; height: 125px; "></textarea>
+            </form>
+            <a href="#page-messages-list" id="btn-close-new-message" data-role="button" data-theme="c" data-inline="true">Cancel</a>
+            <button id="post-message" data-inline="true">Add</button>
+          </div> <!-- content -->
+        </div> <!-- page-new-message -->
+    </body>
+</html>
